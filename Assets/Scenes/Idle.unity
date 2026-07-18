@@ -438,6 +438,7 @@ MonoBehaviour:
   moneyCountText: {fileID: 6124505881102385111}
   scaleCountText: {fileID: 1091931469}
   scalePile: {fileID: 5833006747747989421}
+  fishOnCrate: {fileID: 5833006747747989422}
 --- !u!4 &334159462
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,10 +2604,6 @@ PrefabInstance:
       propertyPath: idleGameHandler
       value: 
       objectReference: {fileID: 334159461}
-    - target: {fileID: 1513522254708568735, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.05
-      objectReference: {fileID: 0}
     - target: {fileID: 4081314659854085776, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
       propertyPath: m_Name
       value: ScaleMining
@@ -2615,14 +2612,6 @@ PrefabInstance:
       propertyPath: idleGameHandler
       value: 
       objectReference: {fileID: 334159461}
-    - target: {fileID: 8705410859239424591, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 8705410859239424591, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.66
-      objectReference: {fileID: 0}
     - target: {fileID: 9046683083231126176, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18
@@ -2690,6 +2679,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e5c608041ba8d45943cd6c139095f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScalePile
+--- !u!114 &5833006747747989422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 40293086795794169, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
+  m_PrefabInstance: {fileID: 5833006747747989419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b07c9a5d0dedf4d974d007c36cf9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishOnCrate
 --- !u!1001 &6124505881102385110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2701,7 +2701,7 @@ PrefabInstance:
     - target: {fileID: 17398394835109477, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 2691401415897593858, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2845,11 +2845,11 @@ PrefabInstance:
     - target: {fileID: 8555894226800817510, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

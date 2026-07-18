@@ -13,6 +13,7 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] TMP_Text moneyCountText;
     [SerializeField] TMP_Text scaleCountText;
     [SerializeField] private ScalePile scalePile;
+    [SerializeField] private FishOnCrate fishOnCrate;
 
     private void Update()
     {
@@ -47,6 +48,7 @@ public class IdleGameHandler : MonoBehaviour
     {
         numScales += amount;
         scalePile.SetScaleCount(numScales);
+        fishOnCrate.HarvestScale();
     }
 
     public void IncreaseAnimationSpeed(float amount)
