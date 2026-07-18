@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class dragonScale : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class dragonScale : MonoBehaviour
     bool collected;
     SpriteRenderer spriteRenderer;
     public float CurrentValue => currentValue;
+
+    [SerializeField] Texture2D colorGradient;
+
 
     void Awake()
     {
@@ -42,23 +46,10 @@ public class dragonScale : MonoBehaviour
 
     private void UpdateVisual()
     {
-        Debug.Log("UPDATE VISUALS");
-        if (currentValue <= 10)
-        {
-            Debug.Log("White");
-            spriteRenderer.color = Color.white;
-        }else if (currentValue <= 50)
-        {
-            Debug.Log("Blue");
-            spriteRenderer.color = Color.blue;
-        }else if (currentValue <= 100)
-        {
-            Debug.Log("Green");
-            spriteRenderer.color = Color.green;
-        }else if (currentValue <= 200)
-        {
-            Debug.Log("Red");
-            spriteRenderer.color = Color.red;
-        }
+        //400 = $10000
+        //0 = $0
+        int pixelX = (int) currentValue / 25;
+        Color colorPixel = colorGradient.GetPixel(pixelX, 0);
+        spriteRenderer.color = colorPixel;
     }
 }

@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::dragonScale
   baseValue: 1
+  currentValue: 0
+  colorGradient: {fileID: 2800000, guid: dce23f0855d841948821a834ae322108, type: 3}
