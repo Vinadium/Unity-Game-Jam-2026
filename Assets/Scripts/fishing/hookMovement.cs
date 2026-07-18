@@ -3,7 +3,7 @@ using UnityEngine;
 public class hookMovement : MonoBehaviour
 {
     [Header("Hook Movement")]
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float followSmoothing = 12f;
 
     [Header("Water space")]
     [SerializeField] public Vector2 minBounds = new Vector2(-8f, -4f);
@@ -11,17 +11,25 @@ public class hookMovement : MonoBehaviour
 
     public bool isBusy { get; set;}
 
+    Camera cam;
+
+    void Awake()
+    {
+        cam = Camera.main;
+    }
+
     void Update()
     {
         if (isBusy) return;
+        
+        Vector3 screenPos = Input.mousePosition;
+        screenPos.z = -cam.transform.position.z;
+        Vector3 mouseWorld = cam.ScreenToWorldPoint(screenPos);
 
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        Vector2 target = new Vector2(
+            Mathf.Clamp(mouseWorld.x, minBounds.x, maxBounds.x),
+            Mathf.Clamp(mouseWorld.y, minBounds.y, maxBounds.y));
 
-        Vector3 pos = transform.position;
-        pos.x += h * moveSpeed * Time.deltaTime;
-        pos.y += v * moveSpeed * Time.deltaTime;
-
-        transform.position = pos;
+        transform.position = target;
     }
 }

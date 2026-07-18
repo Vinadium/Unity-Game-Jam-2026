@@ -92,6 +92,7 @@ public class fishController : MonoBehaviour
         for (int i = 0; i<picks; i++)
         {
             // wiggle animation
+            Debug.Log("The fish picks");
             yield return new WaitForSeconds(pickInterval);
             if (hook==null || hook.isBusy) { state = State.Swimming; yield break; }
         }
@@ -103,6 +104,7 @@ public class fishController : MonoBehaviour
     void bite()
     {
         if (minigame == null || hook.isBusy) { loseInterest(); return;}
+        Debug.Log("The fish bite the hook!");
         state = State.Hooked;
         hook.isBusy = true;
         minigame.startMinigame(this);
