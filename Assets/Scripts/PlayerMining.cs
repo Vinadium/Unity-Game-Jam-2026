@@ -13,6 +13,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     private int currentSwing = 0;
 
+    private bool isMining = false;
+
     private void Start()
     {
         animator.SetInteger("state", 0);
@@ -23,9 +25,31 @@ public class PlayerAnimationController : MonoBehaviour
         animator.speed = animationSpeed;
     }
 
+    public void StartMining()
+    {
+        isMining = true;
+    }
+
+    public void StopMining()
+    {
+        isMining = false;
+    }
+
+    public void ResetSwingCycle()
+    {
+        currentSwing = 0;
+    }
+
     public void IdleFinished()
     {
-        animator.SetInteger("state", 1);
+        if (isMining)
+        {
+            animator.SetInteger("state", 1);
+        }
+        else
+        {
+            animator.SetInteger("state", 0);
+        }
     }
 
     public void ToolFinished()
@@ -37,11 +61,26 @@ public class PlayerAnimationController : MonoBehaviour
         if (currentSwing >= swingsBeforeIdle)
         {
             currentSwing = 0;
-            animator.SetInteger("state", 0);
+
+            if (isMining)
+            {
+                animator.SetInteger("state", 0);
+            }
+            else
+            {
+                animator.SetInteger("state", 0);
+            }
         }
         else
         {
-            animator.Play("Tool", 0, 0f);
+            if (isMining)
+            {
+                animator.Play("Tool", 0, 0f);
+            }
+            else
+            {
+                animator.SetInteger("state", 0);
+            }
         }
     }
 
