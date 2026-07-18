@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using CodeMonkey.Utils;
+using TMPro;
+
 
 public class PegData : MonoBehaviour
 {
@@ -9,6 +12,9 @@ public class PegData : MonoBehaviour
     public float mult = 1;
     private IdleGameHandler idleGameHandler;
     [SerializeField] Texture2D colorGradient;
+    float upgradeCost = 1;
+    TMP_Text upgradeText;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -16,11 +22,17 @@ public class PegData : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         physicsMaterial = new PhysicsMaterial2D();
         circleCollider.sharedMaterial = physicsMaterial;
+        upgradeText = GameObject.Find("UpgradeCost").GetComponent<TMP_Text>();
     }
 
     private void OnMouseDown()
     {
         Upgrade();
+    }
+
+    private void OnMouseEnter()
+    {
+        UpdateUpgradeText();
     }
 
 
@@ -36,10 +48,16 @@ public class PegData : MonoBehaviour
 
     public void Upgrade()
     {
-        Debug.Log("Clicked Upgrade");
-        IncreaseMult(0.1f);
-        ChangeVisual();
+        if (idleGameHandler.moneyAmount > upgradeCost)
+        {
+            IncreaseMult(0.1f);
+            ChangeVisual();
+            IncreaseUpgradeCost();
+            idleGameHandler.moneyAmount -= upgradeCost;
+        }
+
     }
+    
 
 
     private void ChangeVisual()
@@ -50,6 +68,16 @@ public class PegData : MonoBehaviour
         rimColor.color = color;
     }
 
+    private void IncreaseUpgradeCost()
+    {
+        upgradeCost++;
+    }
+
+    void UpdateUpgradeText()
+    {
+        Debug.Log("Hover");
+        upgradeText.text = "Upgrade Cost: " + upgradeCost.ToString();
+    }
 
 
 }

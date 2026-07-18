@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e3e2bbaf40b3a4c83d48aa215939da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IdleGameHandler
-  pegBounceUpgradeCost: 0
-  pegMultUpgradeCost: 0
   moneyAmount: 0
   animationController: {fileID: 5833006747747989420}
   dropPoint: {fileID: 464919807}
@@ -374,15 +372,68 @@ PrefabInstance:
       propertyPath: mult
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4498860315735599871, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498860315735599871, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498860315735599871, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586986561004698989, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586986561004698989, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586986561004698989, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 5205564229057133950, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 4294967295
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447835389482868770, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447835389482868770, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447835389482868770, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729270750352018728, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: hoverBehaviour_Move
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138250986630505726, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138250986630505726, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138250986630505726, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9123446173416975966, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
       propertyPath: m_Name
       value: Pachinko
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6729270750352018728, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1142,30 +1193,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790471491869984390, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8555894226800817510, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-    - target: {fileID: 8555894226800817510, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-    - target: {fileID: 8555894226800817510, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-    - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-    - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
-      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

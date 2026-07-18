@@ -3,8 +3,7 @@ using TMPro;
 
 public class IdleGameHandler : MonoBehaviour
 {
-    public float pegBounceUpgradeCost;
-    public float pegMultUpgradeCost;
+    
     public float moneyAmount;
     [SerializeField] private PlayerAnimationController animationController;
     [SerializeField] GameObject dropPoint;
