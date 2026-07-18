@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8412212283582995931}
   - component: {fileID: 2459141630788995225}
   - component: {fileID: 4522312518938407872}
+  - component: {fileID: 8670405450908533256}
   m_Layer: 0
   m_Name: Scale
   m_TagString: Untagged
@@ -157,3 +158,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8670405450908533256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3894221037414035925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54598d3bb6ac6d4c914943022342c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::dragonScale
+  baseValue: 1

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class dragonScale : MonoBehaviour
 {
-    [SerializeField] float baseValue = 1f;
+    [SerializeField] public float baseValue = 1f;
     
     float currentValue;
     bool multiplierApplied;
