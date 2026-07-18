@@ -11,6 +11,11 @@ public class GameSwitcher : MonoBehaviour
     [Header("Fishing")]
     [SerializeField] GameObject fishUI, fishGame;
 
+    private void Awake()
+    {
+        fishUI.SetActive(false);
+    }
+
 
     public void PlayFishing()
     {

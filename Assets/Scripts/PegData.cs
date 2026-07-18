@@ -75,7 +75,7 @@ public class PegData : MonoBehaviour
 
     private void IncreaseUpgradeCost()
     {
-        upgradeCost++;
+        upgradeCost *=2;
     }
 
 

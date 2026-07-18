@@ -14,19 +14,31 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] TMP_Text scaleCountText;
     [SerializeField] private ScalePile scalePile;
     [SerializeField] private FishOnCrate fishOnCrate;
+    [SerializeField] float launchForce;
 
     private void Update()
     {
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         
-        if (horizontal > 0 || horizontal < 0)
+
+        if (horizontal < 0)
         {
-            dropPoint.transform.position = new Vector3(dropPoint.transform.position.x+(horizontal*speed),dropPoint.transform.position.y);
+            dropPoint.transform.Rotate(0,0,-0.2f);
         }
+        else if (horizontal > 0)
+        {
+            dropPoint.transform.Rotate(0,0,0.2f);
+        }
+
+
+
+
         if(Input.GetKeyDown(KeyCode.Space) && numScales > 0)
         {
-            Instantiate(scale, dropPoint.transform.position, Quaternion.Euler(0,0,0));
+            Debug.Log(dropPoint.transform.rotation.eulerAngles);
+            GameObject scaleObj = Instantiate(scale, dropPoint.transform.position, dropPoint.transform.rotation);
+            scaleObj.GetComponent<Rigidbody2D>().linearVelocity = -dropPoint.transform.up * launchForce;
             numScales--;
             scalePile.SetScaleCount(numScales);
         }
