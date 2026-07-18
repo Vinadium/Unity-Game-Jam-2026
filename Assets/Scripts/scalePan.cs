@@ -29,6 +29,6 @@ public class scalePan : MonoBehaviour
         if (!ds.tryCollect(out float value)) return;
 
         scale.Add(isLeft);
-        handler.AddScales(value);
+        handler.AddMoney(value);
     }
 }

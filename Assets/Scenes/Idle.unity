@@ -150,11 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IdleGameHandler
   pegBounceUpgradeCost: 0
   pegMultUpgradeCost: 0
-  scaleAmount: 0
+  moneyAmount: 0
   dropPoint: {fileID: 464919807}
   speed: 0.01
-  numScales: 3
+  numScales: 100
   scale: {fileID: 3894221037414035925, guid: d1481a2231086a443a19b33b9b153949, type: 3}
+  moneyCountText: {fileID: 0}
 --- !u!4 &334159462
 Transform:
   m_ObjectHideFlags: 0
@@ -323,6 +324,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf7b2bc76f1e4e4ab4955cae0d9f932, type: 3}
+--- !u!4 &861871174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2948243029086068073, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+  m_PrefabInstance: {fileID: 7341735659467991231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1046403669
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +548,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!4 &1809649068 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3403172749705298019, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+  m_PrefabInstance: {fileID: 7341735659467991231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5833006747747989419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -647,6 +658,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2289666891384726431, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: leftPan
+      value: 
+      objectReference: {fileID: 861871174}
+    - target: {fileID: 2289666891384726431, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: rightPan
+      value: 
+      objectReference: {fileID: 1809649068}
     - target: {fileID: 3536048767225484412, guid: 54457f24a59fede45b555517fec615ec, type: 3}
       propertyPath: m_Name
       value: theScales

@@ -5,12 +5,12 @@ public class IdleGameHandler : MonoBehaviour
 {
     public float pegBounceUpgradeCost;
     public float pegMultUpgradeCost;
-    public float scaleAmount;
+    public float moneyAmount;
     [SerializeField] GameObject dropPoint;
     [SerializeField] float speed;
     [SerializeField] int numScales;
     [SerializeField] GameObject scale;
-    [SerializeField] TMP_Text scaleCountText;
+    [SerializeField] TMP_Text moneyCountText;
 
     private void Update()
     {
@@ -35,17 +35,17 @@ public class IdleGameHandler : MonoBehaviour
             Instantiate(scale, dropPoint.transform.position, Quaternion.Euler(0,0,0));
             numScales--;
         }
-        scaleCountText.text = "Scales: " + scaleAmount;
+        moneyCountText.text = "Money: " + moneyAmount;
     }
 
-    public void AddScales(float value)
+    public void AddMoney(float value)
     {
-        scaleAmount += value;
+        moneyAmount += value;
     }
 
-    public void RemoveScales(float value)
+    public void RemoveMoney(float value)
     {
-        scaleAmount -= value;
+        moneyAmount -= value;
     }
 
 }
