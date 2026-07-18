@@ -26,7 +26,7 @@ public class PegData : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<dragonScale>().baseValue *= mult;
+        collision.gameObject.GetComponent<dragonScale>().currentValue *= mult;
     }
 
 }
