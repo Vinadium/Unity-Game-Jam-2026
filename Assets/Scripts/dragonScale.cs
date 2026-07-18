@@ -29,4 +29,9 @@ public class dragonScale : MonoBehaviour
         collected = true;
         return true;
     }
+
+    private void Update()
+    {
+        
+    }
 }
