@@ -32,8 +32,6 @@ Transform:
   m_Children:
   - {fileID: 4383855493714375311}
   - {fileID: 6905599534999672547}
-  - {fileID: 8509221752519990602}
-  - {fileID: 120262179979725571}
   m_Father: {fileID: 855113709638534455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8730148682915414965
@@ -305,12 +303,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3341060130079461691}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.22, y: 1.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2200003, y: 1.1500001, z: 0}
   m_LocalScale: {x: 3.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 224782248169342327}
+  m_Father: {fileID: 2948243029086068073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7045251859549738167
 SpriteRenderer:
@@ -420,9 +418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb727e73c2681174a9dafa4473ce99cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::weighScale
-  degreesPerScale: 2
-  maxTitleAngle: 30
-  tiltSmoothing: 5
+  leftPan: {fileID: 0}
+  rightPan: {fileID: 0}
+  unitsPerScale: 0.1
+  maxOffset: 0.5
+  moveSmoothing: 5
 --- !u!50 &3738558414516004055
 Rigidbody2D:
   serializedVersion: 5
@@ -475,12 +475,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4287448750608586127}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.22, y: 1.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.22, y: 1.1500001, z: 0}
   m_LocalScale: {x: 3.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 224782248169342327}
+  m_Father: {fileID: 3403172749705298019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9097129616424076938
 SpriteRenderer:
@@ -572,7 +572,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8509221752519990602}
   m_Father: {fileID: 855113709638534455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5488119906579040055
@@ -587,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7686614ea4194d92765be79e3d94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scalePan
+  handler: {fileID: 0}
   scale: {fileID: 0}
   side: 0
   scaleTag: Scale
@@ -666,7 +668,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 120262179979725571}
   m_Father: {fileID: 855113709638534455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5927178040499419398
@@ -681,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7686614ea4194d92765be79e3d94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scalePan
+  handler: {fileID: 0}
   scale: {fileID: 0}
   side: 1
   scaleTag: Scale

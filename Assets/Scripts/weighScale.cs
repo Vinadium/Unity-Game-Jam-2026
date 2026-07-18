@@ -1,31 +1,46 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class weighScale : MonoBehaviour
 {
-    [Header("Scale Balancing")]
-    [SerializeField] float degreesPerScale = 2f;
-    [SerializeField] float maxTitleAngle = 30f;
-    [SerializeField] float tiltSmoothing = 5f;
+    [Header("Pan references")]
+    [SerializeField] Transform leftPan;
+    [SerializeField] Transform rightPan;
+
+    [Header("Balance movement")]
+    [SerializeField] float unitsPerScale = 0.1f;
+    [SerializeField] float maxOffset = 0.5f;
+    [SerializeField] float moveSmoothing = 5f;
 
     public int leftCount { get; private set;}
     public int rightCount { get; private set;}
 
     Rigidbody2D rb;
-    float currentAngle;
+    float leftRestY, rightRestY;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
+
+        leftRestY = leftPan.localPosition.y;
+        rightRestY = rightPan.localPosition.y;
     }
 
     void FixedUpdate()
     {
-        int imbalance = rightCount - leftCount;
-        float target = Mathf.Clamp(imbalance * degreesPerScale, -maxTitleAngle, maxTitleAngle);
+        int diff = leftCount - rightCount;
+        float offset = Mathf.Clamp(diff * unitsPerScale, -maxOffset, maxOffset);
 
-        currentAngle = Mathf.Lerp(currentAngle, target, tiltSmoothing * Time.fixedDeltaTime);
+        movePanY(leftPan, leftRestY - offset);
+        movePanY(rightPan, rightRestY + offset);
+    }
 
-        rb.MoveRotation(-currentAngle);
+    void movePanY(Transform pan, float targetY)
+    {
+        Vector3 p = pan.localPosition;
+        p.y = Mathf.Lerp(p.y, targetY, moveSmoothing * Time.fixedDeltaTime);
+        pan.localPosition = p;
     }
 
     public void Add(bool left)

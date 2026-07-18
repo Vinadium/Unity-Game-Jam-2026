@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8670405450908533256}
   m_Layer: 0
   m_Name: Scale
-  m_TagString: Untagged
+  m_TagString: dragonScale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
