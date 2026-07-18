@@ -27,11 +27,6 @@ public class reelMinigame : MonoBehaviour
 
     public bool isActive { get; private set; }
 
-    void Awake()
-    {
-        if (panel != null) panel.SetActive(false);
-    }
-
     fishController currentFish;
     float zoneCenter, zoneVel;
     float fishPos, fishTarget, fishTimer;

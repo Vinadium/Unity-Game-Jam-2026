@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class hookMovement : MonoBehaviour
 {
-    [Header("Hook Movement")]
-    [SerializeField] float followSmoothing = 12f;
 
     [Header("Water space")]
     [SerializeField] public Transform minPoint;
