@@ -3,7 +3,7 @@ using UnityEngine;
 public class multiplierSlot : MonoBehaviour
 {
     [SerializeField] float multiplier = 1f;
-    [SerializeField] string scaleTag = "Scale";
+    [SerializeField] string scaleTag = "dragonScale";
 
     void OnTriggerEnter2D(Collider2D other)
     {

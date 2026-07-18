@@ -176,15 +176,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3894221037414035925, guid: d1481a2231086a443a19b33b9b153949, type: 3}
       propertyPath: m_Name
-      value: Scale
+      value: dragonScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894221037414035925, guid: d1481a2231086a443a19b33b9b153949, type: 3}
+      propertyPath: m_TagString
+      value: dragonScale
       objectReference: {fileID: 0}
     - target: {fileID: 8027939663659430029, guid: d1481a2231086a443a19b33b9b153949, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.68
+      value: -6.51
       objectReference: {fileID: 0}
     - target: {fileID: 8027939663659430029, guid: d1481a2231086a443a19b33b9b153949, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.71
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 8027939663659430029, guid: d1481a2231086a443a19b33b9b153949, type: 3}
       propertyPath: m_LocalPosition.z
@@ -616,17 +620,25 @@ PrefabInstance:
       propertyPath: scale
       value: 
       objectReference: {fileID: 7341735659467991236}
+    - target: {fileID: 5488119906579040055, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: scaleTag
+      value: dragonScale
+      objectReference: {fileID: 0}
     - target: {fileID: 5636160070803064057, guid: 54457f24a59fede45b555517fec615ec, type: 3}
       propertyPath: m_TagString
-      value: Scale
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5927178040499419398, guid: 54457f24a59fede45b555517fec615ec, type: 3}
       propertyPath: scale
       value: 
       objectReference: {fileID: 7341735659467991236}
+    - target: {fileID: 5927178040499419398, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: scaleTag
+      value: dragonScale
+      objectReference: {fileID: 0}
     - target: {fileID: 7021301710171300510, guid: 54457f24a59fede45b555517fec615ec, type: 3}
       propertyPath: m_TagString
-      value: Scale
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

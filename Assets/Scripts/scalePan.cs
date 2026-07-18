@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class scalePan : MonoBehaviour
@@ -7,7 +8,7 @@ public class scalePan : MonoBehaviour
     [SerializeField] IdleGameHandler handler;
     [SerializeField] weighScale scale;
     [SerializeField] Side side;
-    [SerializeField] string scaleTag = "Scale";
+    [SerializeField] string scaleTag = "dragonScale";
 
     bool isLeft => side == Side.left;
 
@@ -19,6 +20,7 @@ public class scalePan : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Scale entered box bueno");
         if (!other.CompareTag(scaleTag)) return;
 
         dragonScale ds = other.GetComponent<dragonScale>();
