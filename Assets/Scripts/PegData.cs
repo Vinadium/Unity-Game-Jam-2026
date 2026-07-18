@@ -18,7 +18,7 @@ public class PegData : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        idleGameHandler = GameObject.Find("Scripts").GetComponent<IdleGameHandler>();
+        idleGameHandler = GameObject.Find("IdleHandler").GetComponent<IdleGameHandler>();
         circleCollider = GetComponent<CircleCollider2D>();
         physicsMaterial = new PhysicsMaterial2D();
         circleCollider.sharedMaterial = physicsMaterial;

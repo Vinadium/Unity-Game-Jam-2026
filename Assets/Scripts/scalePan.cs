@@ -15,7 +15,7 @@ public class scalePan : MonoBehaviour
     void Awake()
     {
         if (handler == null)
-            handler = GameObject.Find("Scripts").GetComponent<IdleGameHandler>();
+            handler = GameObject.Find("IdleHandler").GetComponent<IdleGameHandler>();
     }
 
     void OnTriggerEnter2D(Collider2D other)

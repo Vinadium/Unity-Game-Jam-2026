@@ -6,8 +6,11 @@ public class hookMovement : MonoBehaviour
     [SerializeField] float followSmoothing = 12f;
 
     [Header("Water space")]
-    [SerializeField] public Vector2 minBounds = new Vector2(-8f, -4f);
-    [SerializeField] public Vector2 maxBounds = new Vector2(8f, 3f);
+    [SerializeField] public Transform minPoint;
+    [SerializeField] public Transform maxPoint;
+
+    [SerializeField] public Vector2 minBounds;
+    [SerializeField] public Vector2 maxBounds;
 
     public bool isBusy { get; set;}
 
@@ -15,6 +18,8 @@ public class hookMovement : MonoBehaviour
 
     void Awake()
     {
+        minBounds = new Vector2(minPoint.position.x, minPoint.position.y);
+        maxBounds = new Vector2(maxPoint.position.x, maxPoint.position.y);
         cam = Camera.main;
     }
 
