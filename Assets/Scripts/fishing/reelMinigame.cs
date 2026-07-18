@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class reelMinigame : MonoBehaviour
 {
@@ -18,12 +19,18 @@ public class reelMinigame : MonoBehaviour
     [SerializeField] float drainRate = 0.25f;
 
     [Header("UI System")]
+    [SerializeField] GameObject panel;
     [SerializeField] RectTransform track;
     [SerializeField] RectTransform catchZoneUI;
     [SerializeField] RectTransform fishUI;
     [SerializeField] UnityEngine.UI.Image progressFill;
 
     public bool isActive { get; private set; }
+
+    void Awake()
+    {
+        if (panel != null) panel.SetActive(false);
+    }
 
     fishController currentFish;
     float zoneCenter, zoneVel;
@@ -52,7 +59,7 @@ public class reelMinigame : MonoBehaviour
         fishPos = 0.5f;
         pickFishTarget();
         progress = 0.3f;
-        gameObject.SetActive(true);
+        if (panel != null) panel.SetActive(true);
     }
 
     void updateZone()
@@ -85,14 +92,14 @@ public class reelMinigame : MonoBehaviour
     void updateUI()
     {
         if (track == null) return;
-        float h = track.rect.height;
+        float w = track.rect.width;
         if (catchZoneUI != null)
         {
-            catchZoneUI.sizeDelta = new Vector2(catchZoneUI.sizeDelta.x, zoneHeight * h);
-            catchZoneUI.anchoredPosition = new Vector2(catchZoneUI.anchoredPosition.x, (zoneCenter - 0.5f) * h);
+            catchZoneUI.sizeDelta = new Vector2(zoneHeight * w, catchZoneUI.sizeDelta.y);
+            catchZoneUI.anchoredPosition = new Vector2((zoneCenter - 0.5f) * w, catchZoneUI.anchoredPosition.y);
         }
         if (fishUI != null)
-            fishUI.anchoredPosition = new Vector2(fishUI.anchoredPosition.x, (fishPos - 0.5f) * h);
+            fishUI.anchoredPosition = new Vector2((fishPos - 0.5f) * w, fishUI.anchoredPosition.y);
         if (progressFill != null)
             progressFill.fillAmount = progress;
     }
@@ -103,6 +110,6 @@ public class reelMinigame : MonoBehaviour
         if (caught) currentFish.onReeledIn();
         else currentFish.onEscape();
         currentFish = null;
-        // gameObject.SetActive(false);  | hide the panel
+        if (panel != null) panel.SetActive(false);
     }
 }
