@@ -156,6 +156,7 @@ MonoBehaviour:
   scale: {fileID: 3894221037414035925, guid: d1481a2231086a443a19b33b9b153949, type: 3}
   moneyCountText: {fileID: 6124505881102385111}
   scaleCountText: {fileID: 1091931469}
+  scalePile: {fileID: 5833006747747989421}
 --- !u!4 &334159462
 Transform:
   m_ObjectHideFlags: 0
@@ -446,7 +447,7 @@ Transform:
 --- !u!1 &870832114
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2128158654365633368, guid: 856d296b0cd698a4eb39e1208dd98c90, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -1103,6 +1104,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655bcc2a2e796a24e8070544df5035f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMining
+--- !u!114 &5833006747747989421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4708936579593269215, guid: 314fa486a7865d5459615a7fbccc736d, type: 3}
+  m_PrefabInstance: {fileID: 5833006747747989419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e5c608041ba8d45943cd6c139095f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScalePile
 --- !u!1001 &6124505881102385110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1111,6 +1123,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17398394835109477, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 2691401415897593858, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1195,6 +1211,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8555894226800817510, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028502345715833287, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -12,6 +12,7 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] GameObject scale;
     [SerializeField] TMP_Text moneyCountText;
     [SerializeField] TMP_Text scaleCountText;
+    [SerializeField] private ScalePile scalePile;
 
     private void Update()
     {
@@ -26,6 +27,7 @@ public class IdleGameHandler : MonoBehaviour
         {
             Instantiate(scale, dropPoint.transform.position, Quaternion.Euler(0,0,0));
             numScales--;
+            scalePile.SetScaleCount(numScales);
         }
         moneyCountText.text = $"Money: {moneyAmount}";
         scaleCountText.text = $"Scales: {numScales}";
@@ -44,6 +46,7 @@ public class IdleGameHandler : MonoBehaviour
     public void AddScale(int amount = 1)
     {
         numScales += amount;
+        scalePile.SetScaleCount(numScales);
     }
 
     public void IncreaseAnimationSpeed(float amount)
