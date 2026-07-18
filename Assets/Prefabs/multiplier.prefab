@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8039430315247491444}
   - component: {fileID: 1783099273994488675}
   - component: {fileID: 5231193647571271798}
+  - component: {fileID: 2370271498066333220}
   m_Layer: 0
   m_Name: 5xMultLeft
   m_TagString: Untagged
@@ -63,7 +64,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 0.4765995, g: 1, b: 0, a: 0.050980393}
+  m_Color: {r: 0, g: 1, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,6 +140,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &2370271498066333220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445011069614609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 5
+  scaleTag: dragonScale
 --- !u!1 &39895009495168365
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +165,7 @@ GameObject:
   - component: {fileID: 8861741942030541819}
   - component: {fileID: 9025244922835375721}
   - component: {fileID: 3406425774160679305}
+  - component: {fileID: 4566975354744882720}
   m_Layer: 0
   m_Name: 0xMultLeft
   m_TagString: Untagged
@@ -202,7 +218,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -268,7 +284,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 1, g: 0.10015053, b: 0, a: 0.050980393}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -278,6 +294,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &4566975354744882720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39895009495168365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 0
+  scaleTag: dragonScale
 --- !u!1 &103538399625418617
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +458,7 @@ GameObject:
   - component: {fileID: 6512621196292600769}
   - component: {fileID: 7334838732784756728}
   - component: {fileID: 1227916160654076901}
+  - component: {fileID: 5362715448982931673}
   m_Layer: 0
   m_Name: 5xMultRight
   m_TagString: Untagged
@@ -480,7 +511,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -546,7 +577,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 0.4765995, g: 1, b: 0, a: 0.050980393}
+  m_Color: {r: 0, g: 1, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -556,6 +587,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &5362715448982931673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273851215506051423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 5
+  scaleTag: dragonScale
 --- !u!1 &384416840821286820
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +612,7 @@ GameObject:
   - component: {fileID: 4443528193187655867}
   - component: {fileID: 8671609314259095443}
   - component: {fileID: 5622909590060306665}
+  - component: {fileID: 3133596001953941059}
   m_Layer: 0
   m_Name: 2xMultLeft
   m_TagString: Untagged
@@ -619,7 +665,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -685,7 +731,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 1, g: 0.97149765, b: 0, a: 0.050980393}
+  m_Color: {r: 1, g: 1, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -695,6 +741,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &3133596001953941059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384416840821286820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 2
+  scaleTag: dragonScale
 --- !u!1 &792176481802950087
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +1044,7 @@ GameObject:
   - component: {fileID: 1304779570925845539}
   - component: {fileID: 5892499839970858821}
   - component: {fileID: 3911104783435981403}
+  - component: {fileID: 4861904385667680945}
   m_Layer: 0
   m_Name: 0xMultRight
   m_TagString: Untagged
@@ -1036,7 +1097,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1102,7 +1163,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 1, g: 0.101960786, b: 0, a: 0.050980393}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1112,6 +1173,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &4861904385667680945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3316231733942615410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 0
+  scaleTag: dragonScale
 --- !u!1 &5349139327112118508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1240,7 @@ GameObject:
   - component: {fileID: 8409192956485724139}
   - component: {fileID: 7765226270686275089}
   - component: {fileID: 6320403556114203566}
+  - component: {fileID: 4569258709728192113}
   m_Layer: 0
   m_Name: 2xMultRight
   m_TagString: Untagged
@@ -1217,7 +1293,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1283,7 +1359,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41df0b0e33e788d4f8f29af2c3d89d04, type: 3}
-  m_Color: {r: 1, g: 0.972549, b: 0, a: 0.050980393}
+  m_Color: {r: 1, g: 1, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1293,6 +1369,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &4569258709728192113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107900058066745949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24676a03d0626c24faa5ba8aa5636a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::multiplierSlot
+  multiplier: 2
+  scaleTag: dragonScale
 --- !u!1 &8211657111911636020
 GameObject:
   m_ObjectHideFlags: 0

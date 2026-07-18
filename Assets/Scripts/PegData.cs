@@ -32,7 +32,12 @@ public class PegData : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        UpdateUpgradeText();
+        upgradeText.text = "Upgrade Cost: " + upgradeCost.ToString();
+    }
+
+    private void OnMouseExit()
+    {
+        upgradeText.text = "";
     }
 
 
@@ -71,12 +76,6 @@ public class PegData : MonoBehaviour
     private void IncreaseUpgradeCost()
     {
         upgradeCost++;
-    }
-
-    void UpdateUpgradeText()
-    {
-        Debug.Log("Hover");
-        upgradeText.text = "Upgrade Cost: " + upgradeCost.ToString();
     }
 
 
