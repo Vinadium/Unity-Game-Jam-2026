@@ -21,4 +21,4 @@ MonoBehaviour:
   minWeight: 0.6
   maxWeight: 6
   swimSpeed: 6
-  biteChance: 0.1
+  biteChance: 0.3

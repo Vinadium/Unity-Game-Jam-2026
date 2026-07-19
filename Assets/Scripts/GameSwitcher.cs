@@ -6,7 +6,7 @@ public class GameSwitcher : MonoBehaviour
     [SerializeField] GameObject cam;
 
     [Header("Idle")]
-    [SerializeField] GameObject idleUI, idleGame;
+    [SerializeField] GameObject idleUI, idleGame, compendUI;
 
     [Header("Fishing")]
     [SerializeField] GameObject fishUI, fishGame;
@@ -15,11 +15,13 @@ public class GameSwitcher : MonoBehaviour
     private void Awake()
     {
         fishUI.SetActive(false);
+        compendUI.SetActive(false);
     }
 
 
     public void PlayFishing()
     {
+        compendUI.SetActive(false);
         idleUI.SetActive(false);
         idleGame.SetActive(false);
         fishUI.SetActive(true);
