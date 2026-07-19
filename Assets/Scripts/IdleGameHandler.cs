@@ -22,7 +22,7 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] TMP_Text toolStatText, speedStatText, hitStatText, rodStatText;
     int toolUpgradeCost = 50, speedUpgradeCost=2, hitUpgradeCost=20, rodUpgradeCost=30;
     float speedIncr = 0.1f, hitIncr=1;
-    int toolLevel = 1, rodLevel = 1;
+    public int toolLevel = 1, rodLevel = 1;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class IdleGameHandler : MonoBehaviour
         toolStatText.text = toolLevel + " per hit -> " + (toolLevel + 1) + " per hit";
         speedStatText.text = animationController.animationSpeed + " -> " + (animationController.animationSpeed + speedIncr);
         hitStatText.text = animationController.swingsBeforeIdle + " -> " + (animationController.swingsBeforeIdle + hitIncr);
-        rodStatText.text = "SOMETHING, WHO KNOWS";
+        rodStatText.text = "Rod Level" + rodLevel + " -> " + (rodLevel +1);
     }
 
     private void Update()
@@ -163,13 +163,13 @@ public class IdleGameHandler : MonoBehaviour
         if (moneyAmount >= rodUpgradeCost)
         {
             moneyAmount -= rodUpgradeCost;
-            //////////////////////////////////////////////////////////////////////////////////////UPGRADE ROD????????
+            rodLevel++;
 
 
             rodUpgradeCost = (int)(rodUpgradeCost * 1.5);
             rodCostText.text = "Cost: " + rodUpgradeCost;
 
-            hitStatText.text = "SOMETHING, WHO KNOWS";
+            rodStatText.text = "Rod Level " + rodLevel + " -> " + (rodLevel + 1);
         }
     }
 }

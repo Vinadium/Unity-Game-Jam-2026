@@ -771,6 +771,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c74a7f7372e7c4cb3705132610fc98, type: 3}
+--- !u!1 &670785746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670785748}
+  - component: {fileID: 670785747}
+  m_Layer: 0
+  m_Name: biomeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &670785747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670785746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e0a2686fd585c499ba79b0c399f0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::biomeController
+  scale: {fileID: 7341735659467991239}
+  dominanceThreshold: 0.6
+--- !u!4 &670785748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670785746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.57829, y: -3.22521, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &679790899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2698,6 +2744,7 @@ MonoBehaviour:
   idleGame: {fileID: 1254013991}
   fishUI: {fileID: 1906124758}
   fishGame: {fileID: 1279148164}
+  minigame: {fileID: 0}
 --- !u!4 &1986010156
 Transform:
   m_ObjectHideFlags: 0
@@ -3127,7 +3174,7 @@ PrefabInstance:
     - target: {fileID: 17398394835109477, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 614900530368779890, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3159,7 +3206,7 @@ PrefabInstance:
     - target: {fileID: 1126906446868090474, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 2691401415897593858, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3347,7 +3394,7 @@ PrefabInstance:
     - target: {fileID: 7293299077437215727, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 7436480022414350318, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3411,7 +3458,7 @@ PrefabInstance:
     - target: {fileID: 8761235989026943014, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 9176524624384634499, guid: 5c33cde03876b3f40bb99b972677a468, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3611,6 +3658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: theScales
       objectReference: {fileID: 0}
+    - target: {fileID: 3842923010400334310, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 4206116443560487528, guid: 54457f24a59fede45b555517fec615ec, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.7
@@ -3627,6 +3678,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.78
       objectReference: {fileID: 0}
+    - target: {fileID: 8743299982302378581, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3637,6 +3692,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 855113709638534455, guid: 54457f24a59fede45b555517fec615ec, type: 3}
   m_PrefabInstance: {fileID: 7341735659467991231}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7341735659467991239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2289666891384726431, guid: 54457f24a59fede45b555517fec615ec, type: 3}
+  m_PrefabInstance: {fileID: 7341735659467991231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb727e73c2681174a9dafa4473ce99cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::weighScale
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3651,3 +3717,4 @@ SceneRoots:
   - {fileID: 1254013992}
   - {fileID: 1417414439}
   - {fileID: 1550232991}
+  - {fileID: 670785748}

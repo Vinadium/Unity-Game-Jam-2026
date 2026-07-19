@@ -10,6 +10,7 @@ public class GameSwitcher : MonoBehaviour
 
     [Header("Fishing")]
     [SerializeField] GameObject fishUI, fishGame;
+    [SerializeField] reelMinigame minigame;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class GameSwitcher : MonoBehaviour
 
     public void PlayIdle()
     {
+        if (minigame != null) minigame.forceEnd();
         idleUI.SetActive(true);
         idleGame.SetActive(true);
         fishUI.SetActive(false);

@@ -567,7 +567,7 @@ MonoBehaviour:
   m_text: 'Upgrade Cost: 0000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-  m_sharedMaterial: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+  m_sharedMaterial: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1632,9 +1632,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::reelMinigame
   zoneHeight: 0.1
-  upwardsAccel: 1
-  gravity: 0.5
-  maxSpeed: 0.1
+  upwardsAccel: 2
+  gravity: 2.5
+  maxSpeed: 0.3
   reelKey: 32
   fishMoveInterval: 0.7
   fishSpeed: 0.1
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_text: Go Fishing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-  m_sharedMaterial: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+  m_sharedMaterial: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_text: UPGRADES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-  m_sharedMaterial: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+  m_sharedMaterial: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_text: 'Scales: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-  m_sharedMaterial: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+  m_sharedMaterial: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_text: 'Money: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
-  m_sharedMaterial: {fileID: 6830005008402823552, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+  m_sharedMaterial: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3289,6 +3289,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4193307322970531242, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 5650215346423802834, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 8546103638884041706, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3391,10 +3407,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4193307322970531242, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 5650215346423802834, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
       propertyPath: m_text
       value: '# Hits Upgrade'
       objectReference: {fileID: 0}
+    - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 8546103638884041706, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3497,10 +3529,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4193307322970531242, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 5650215346423802834, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
       propertyPath: m_text
       value: Rod Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 8546103638884041706, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3603,10 +3651,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4193307322970531242, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 5650215346423802834, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
       propertyPath: m_text
       value: Speed Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 7952866538817238707, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
+    - target: {fileID: 8546103638884041706, guid: 8bf02c78bda3e1a438c1fff41831078a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1946047035824869156, guid: ad7b06b202e604142bc11b15433ca2e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

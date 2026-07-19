@@ -45,6 +45,12 @@ public class reelMinigame : MonoBehaviour
         else if (progress <= 0f) finish(false);
     }
 
+    public void forceEnd()
+    {
+        if (!isActive) return;
+        finish(false);
+    }
+
     public void startMinigame(fishController fish)
     {
         currentFish = fish;

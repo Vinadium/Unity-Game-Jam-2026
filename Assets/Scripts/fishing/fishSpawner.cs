@@ -17,6 +17,11 @@ public class fishSpawner : MonoBehaviour
     [SerializeField] biomeController biome;
     [SerializeField] hookMovement hook;
     [SerializeField] Transform spawnedParent;
+    [SerializeField] IdleGameHandler idleGameHandler;
+
+    [Header("Rarity")]
+    [SerializeField] float rarityBiasPerLevel = 0.5f;
+    [SerializeField] float minBiasExponent = 0.15f;
 
 
     readonly List<fishController> active = new List<fishController>();
@@ -26,6 +31,7 @@ public class fishSpawner : MonoBehaviour
     {
         if (biome == null) biome = FindAnyObjectByType<biomeController>();
         if (hook == null) hook = FindAnyObjectByType<hookMovement>();
+        if (idleGameHandler == null) idleGameHandler = FindAnyObjectByType<IdleGameHandler>(FindObjectsInactive.Include);
     }
 
     void Start()
@@ -69,24 +75,32 @@ public class fishSpawner : MonoBehaviour
     {
         fishBiome current = biome != null ? biome.currentBiome : fishBiome.Any;
 
+        int rodLevel = idleGameHandler != null ? idleGameHandler.rodLevel : 1;
+        int upgrades = Mathf.Max(0, rodLevel - 1);
+        float biasExponent = Mathf.Max(minBiasExponent, 1f/ (1f + upgrades * rarityBiasPerLevel));
+
         float total = 0f;
         List<fishData> eligible = new List<fishData>();
+        List<float> weights = new List<float>();
         foreach (fishData f in allFish)
         {
             if (f == null) continue;
-            if (f.biome == fishBiome.Any || f.biome == current)
+            if (f.biome == current)
             {
+                float w = Mathf.Pow(f.spawnWeight, biasExponent);
                 eligible.Add(f);
-                total += f.spawnWeight;
+                weights.Add(w);
+                total += w;
+
             }
         }
         if (eligible.Count == 0 || total <= 0f) return null;
 
         float r = Random.Range(0f, total);
-        foreach (fishData f in eligible)
+        for (int i=0;i<eligible.Count;i++)
         {
-            r -= f.spawnWeight;
-            if (r <= 0f) return f;
+            r -= weights[i];
+            if (r <= 0f) return eligible[i];
         }
         return eligible[eligible.Count - 1];
     }
