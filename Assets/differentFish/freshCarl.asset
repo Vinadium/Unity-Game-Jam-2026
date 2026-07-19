@@ -15,10 +15,10 @@ MonoBehaviour:
   fishName: Carl
   sprite: {fileID: 21300000, guid: 3c1d9a7ac22e0e64a94855c6c29b475b, type: 3}
   skeletonSprite: {fileID: 0}
-  baseValue: 1
+  baseValue: 2
   biome: 1
   spawnWeight: 20
-  minWeight: 0.3
-  maxWeight: 2
+  minWeight: 2
+  maxWeight: 4
   swimSpeed: 1.2
   biteChance: 0.8

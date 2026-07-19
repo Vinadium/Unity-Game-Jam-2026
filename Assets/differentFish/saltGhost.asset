@@ -18,7 +18,7 @@ MonoBehaviour:
   baseValue: 4
   biome: 2
   spawnWeight: 5
-  minWeight: 1
-  maxWeight: 6
+  minWeight: 3
+  maxWeight: 9
   swimSpeed: 1.8
   biteChance: 0.4

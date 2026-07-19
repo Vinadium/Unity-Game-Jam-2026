@@ -15,10 +15,10 @@ MonoBehaviour:
   fishName: Blue Fish
   sprite: {fileID: 21300000, guid: 6b15b27467413824ab4a313330e78283, type: 3}
   skeletonSprite: {fileID: 21300000, guid: af9aa3132be09694aa66bf73c4e99366, type: 3}
-  baseValue: 1
+  baseValue: 2
   biome: 0
   spawnWeight: 20
-  minWeight: 0.3
+  minWeight: 1
   maxWeight: 2
   swimSpeed: 1.2
   biteChance: 0.8

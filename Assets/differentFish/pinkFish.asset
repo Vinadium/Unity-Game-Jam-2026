@@ -15,10 +15,10 @@ MonoBehaviour:
   fishName: Pink Fish
   sprite: {fileID: 21300000, guid: b72cbf264da36e94a9ff9abbb4aa94eb, type: 3}
   skeletonSprite: {fileID: 21300000, guid: 697c832588e3f444594099fc175c76de, type: 3}
-  baseValue: 4
+  baseValue: 1
   biome: 0
   spawnWeight: 5
   minWeight: 1
-  maxWeight: 6
+  maxWeight: 2
   swimSpeed: 1.8
   biteChance: 0.4
