@@ -2,11 +2,14 @@ using UnityEngine;
 
 public enum fishBiome { Any, Freshwater, Saltwater }
 
-public class fishData : MonoBehaviour
+[CreateAssetMenu(fileName =  "fishData", menuName = "Fishing/Fish")]
+
+public class fishData : ScriptableObject
 {
     [Header("Identity")]
     public string fishName = "New Fish";
     public Sprite sprite;
+    public Sprite skeletonSprite;
 
     [Header("Value")]
     public float baseValue = 1f;

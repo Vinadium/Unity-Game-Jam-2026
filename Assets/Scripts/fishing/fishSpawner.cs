@@ -23,6 +23,7 @@ public class fishSpawner : MonoBehaviour
     void Awake()
     {
         if (biome == null) biome = FindAnyObjectByType<biomeController>();
+        if (hook == null) hook = FindAnyObjectByType<hookMovement>();
     }
 
     void Start()
@@ -55,6 +56,11 @@ public class fishSpawner : MonoBehaviour
             Random.Range(hook.minBounds.x, hook.maxBounds.x),
             Random.Range(hook.minBounds.y, hook.maxBounds.y)
         );
+
+        GameObject go = Instantiate(fishPrefab, pos, Quaternion.identity);
+        fishController fish = go.GetComponent<fishController>();
+        fish.Initialize(data, data.RollWeight());
+        active.Add(fish);
     }
 
     fishData pickFish()

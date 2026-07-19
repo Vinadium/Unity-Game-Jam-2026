@@ -1,6 +1,5 @@
 using System.Collections;
-using TMPro;
-using Unity.Cinemachine;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class fishController : MonoBehaviour
@@ -24,6 +23,14 @@ public class fishController : MonoBehaviour
     [SerializeField] hookMovement hook;
     [SerializeField] reelMinigame minigame;
 
+    [Header("Data")]
+    [SerializeField] fishData data;
+
+    public float weight;
+    public int scaleValue;
+
+    public fishData Data => data;
+
     Vector2 minBounds, maxBounds;
     Vector2 waypoint;
 
@@ -40,6 +47,18 @@ public class fishController : MonoBehaviour
         minBounds = hook.minBounds;
         maxBounds = hook.maxBounds;
         pickNewWaypoint();
+    }
+
+    public void Initialize(fishData fishData, float rolledWeight)
+    {
+        data = fishData;
+        weight = rolledWeight;
+        if (data != null)
+        {
+            swimSpeed = data.swimSpeed;
+            biteChance = data.biteChance;
+            scaleValue = data.scaleValueFor(weight);
+        }
     }
 
     void Update()
@@ -119,8 +138,21 @@ public class fishController : MonoBehaviour
 
     public void onReeledIn()
     {
-        hook.isBusy = false;
-        // add to inventory
+       hook.isBusy = false;
+
+       if (data != null)
+        {
+            compendium.Instance?.recordCatch(data.fishName, weight);
+
+            FishData caughtFish = new FishData
+            {
+                fishName = data.fishName,
+                fishSprite = data.sprite,
+                skeletonSprite = data.skeletonSprite,
+                scalesBeforeSkeleton = scaleValue
+            };
+            fishInventory.Instance?.addFish(caughtFish);
+        }
         Destroy(gameObject);
     }
 
