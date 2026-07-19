@@ -15,10 +15,10 @@ MonoBehaviour:
   fishName: Green Fish
   sprite: {fileID: 21300000, guid: 6ba9810d7bb051f48b4ec5e285e3f341, type: 3}
   skeletonSprite: {fileID: 21300000, guid: 3e54a13977a3d4c49a4149c3cd6c8ad7, type: 3}
-  baseValue: 4
+  baseValue: 1
   biome: 0
-  spawnWeight: 10
-  minWeight: 3
-  maxWeight: 8
+  spawnWeight: 20
+  minWeight: 0.3
+  maxWeight: 2
   swimSpeed: 1.2
-  biteChance: 0.75
+  biteChance: 0.8

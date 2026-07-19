@@ -15,10 +15,10 @@ MonoBehaviour:
   fishName: Orange Fish
   sprite: {fileID: 21300000, guid: 797b83f266f672340a8cc1b61f25ced1, type: 3}
   skeletonSprite: {fileID: 21300000, guid: a1d379e39b54a7a4e9d6ade9f7757a31, type: 3}
-  baseValue: 3
+  baseValue: 2
   biome: 0
   spawnWeight: 10
-  minWeight: 1.5
-  maxWeight: 3
-  swimSpeed: 1
-  biteChance: 0.9
+  minWeight: 0.5
+  maxWeight: 4
+  swimSpeed: 1.5
+  biteChance: 0.6

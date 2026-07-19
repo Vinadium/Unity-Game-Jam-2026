@@ -17,8 +17,8 @@ MonoBehaviour:
   skeletonSprite: {fileID: 0}
   baseValue: 1
   biome: 1
-  spawnWeight: 10
-  minWeight: 0.5
-  maxWeight: 5
-  swimSpeed: 1.5
-  biteChance: 0.5
+  spawnWeight: 20
+  minWeight: 0.3
+  maxWeight: 2
+  swimSpeed: 1.2
+  biteChance: 0.8

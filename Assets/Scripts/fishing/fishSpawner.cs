@@ -71,6 +71,8 @@ public class fishSpawner : MonoBehaviour
         active.Add(fish);
     }
 
+    public fishData[] AllFish => allFish;
+
     fishData pickFish()
     {
         fishBiome current = biome != null ? biome.currentBiome : fishBiome.Any;
