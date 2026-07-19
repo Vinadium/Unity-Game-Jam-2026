@@ -6,10 +6,10 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private IdleGameHandler idleGameHandler;
 
     [SerializeField] [Min(1)]
-    private int swingsBeforeIdle = 1;
+    public int swingsBeforeIdle = 1;
 
     [SerializeField] [Min(0.1f)]
-    private float animationSpeed = 1f;
+    public float animationSpeed = 1f;
 
     private int currentSwing = 0;
 

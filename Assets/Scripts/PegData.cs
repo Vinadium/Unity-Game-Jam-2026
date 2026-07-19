@@ -28,6 +28,7 @@ public class PegData : MonoBehaviour
     private void OnMouseDown()
     {
         Upgrade();
+        upgradeText.text = "Upgrade Cost: " + upgradeCost.ToString();
     }
 
     private void OnMouseEnter()
@@ -67,7 +68,7 @@ public class PegData : MonoBehaviour
 
     private void ChangeVisual()
     {
-        int pixelX = (int) (mult / 0.125f);
+        int pixelX = (int) (mult / 0.5f);
         Color color = colorGradient.GetPixel(pixelX, 0);
 
         rimColor.color = color;

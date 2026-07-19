@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class dragonScale : MonoBehaviour
@@ -35,9 +36,21 @@ public class dragonScale : MonoBehaviour
         return true;
     }
 
+
+    float timer = 30f;
+
     private void Update()
     {
         UpdateVisual();
+
+
+        if(timer>=0)
+            timer -= Time.deltaTime;
+        else
+            Destroy(this.gameObject);
+
+
+
 
         if(transform.position.y < -10)
             Destroy(this.gameObject);
@@ -52,4 +65,8 @@ public class dragonScale : MonoBehaviour
         Color colorPixel = colorGradient.GetPixel(pixelX, 0);
         spriteRenderer.color = colorPixel;
     }
+
+    
+
+
 }
