@@ -61,7 +61,7 @@ public class dragonScale : MonoBehaviour
     {
         //400 = $10000
         //0 = $0
-        int pixelX = (int) currentValue / 25;
+        int pixelX = (int) currentValue / 100;
         Color colorPixel = colorGradient.GetPixel(pixelX, 0);
         spriteRenderer.color = colorPixel;
     }
