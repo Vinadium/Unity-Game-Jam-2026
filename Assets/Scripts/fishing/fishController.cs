@@ -58,6 +58,7 @@ public class fishController : MonoBehaviour
             swimSpeed = data.swimSpeed;
             biteChance = data.biteChance;
             scaleValue = data.scaleValueFor(weight);
+            if (sr != null) sr.sprite = data.sprite;
         }
     }
 
