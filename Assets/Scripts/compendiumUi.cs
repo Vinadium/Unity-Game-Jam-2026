@@ -49,6 +49,8 @@ public class compendiumUi : MonoBehaviour
                 }
             }
         }
+        
+
         listText.text = sb.Length > 0 ? sb.ToString(): "No fish known yet.";
     }
 }
