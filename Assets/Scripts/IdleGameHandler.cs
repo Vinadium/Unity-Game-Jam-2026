@@ -7,7 +7,6 @@ public class IdleGameHandler : MonoBehaviour
     public float moneyAmount;
     [SerializeField] private PlayerAnimationController animationController;
     [SerializeField] GameObject dropPoint;
-    [SerializeField] float speed;
     [SerializeField] int numScales;
     [SerializeField] GameObject scale;
     [SerializeField] TMP_Text moneyCountText;
@@ -16,6 +15,7 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] private FishOnCrate fishOnCrate;
     [SerializeField] float launchForce;
     bool shopOpened = false;
+    [SerializeField] float rotateSpeed;
     [Header("Shop")]
     [SerializeField] GameObject shop;
     [SerializeField] TMP_Text toolCostText, speedCostText, hitCostText, rodCostText;
@@ -44,11 +44,13 @@ public class IdleGameHandler : MonoBehaviour
 
         if (horizontal < 0)
         {
-            dropPoint.transform.Rotate(0,0,-0.2f);
+            Vector3 rotationSpeed = new Vector3(0, 0, -rotateSpeed);
+            dropPoint.transform.Rotate(rotationSpeed * Time.deltaTime);
         }
         else if (horizontal > 0)
         {
-            dropPoint.transform.Rotate(0,0,0.2f);
+            Vector3 rotationSpeed = new Vector3(0, 0, rotateSpeed);
+            dropPoint.transform.Rotate(rotationSpeed*Time.deltaTime);
         }
 
 

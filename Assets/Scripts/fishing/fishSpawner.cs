@@ -16,6 +16,8 @@ public class fishSpawner : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] biomeController biome;
     [SerializeField] hookMovement hook;
+    [SerializeField] Transform spawnedParent;
+
 
     readonly List<fishController> active = new List<fishController>();
     float respawnTimer;
@@ -57,7 +59,7 @@ public class fishSpawner : MonoBehaviour
             Random.Range(hook.minBounds.y, hook.maxBounds.y)
         );
 
-        GameObject go = Instantiate(fishPrefab, pos, Quaternion.identity);
+        GameObject go = Instantiate(fishPrefab, pos, Quaternion.identity,spawnedParent);
         fishController fish = go.GetComponent<fishController>();
         fish.Initialize(data, data.RollWeight());
         active.Add(fish);
