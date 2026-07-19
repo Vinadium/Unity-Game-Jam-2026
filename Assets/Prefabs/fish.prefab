@@ -140,12 +140,12 @@ MonoBehaviour:
   swimSpeed: 1.5
   waypointReachDist: 0.2
   noticeRange: 2
-  pickRange: 0.4
+  pickRange: 0.1
   minPicks: 2
   maxPicks: 5
   pickInterval: 0.5
   biteChance: 0.5
-  loseInterestCooldown: 2
+  loseInterestCooldown: 4.5
   hook: {fileID: 0}
   minigame: {fileID: 0}
   data: {fileID: 0}
