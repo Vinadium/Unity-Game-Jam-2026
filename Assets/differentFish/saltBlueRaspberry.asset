@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 811d6cf183743f94483c121e6b505bb0, type: 3}
   skeletonSprite: {fileID: 21300000, guid: 9522bb5ff1085144bab8545c35600f25, type: 3}
   baseValue: 1
-  biome: 0
+  biome: 2
   spawnWeight: 10
   minWeight: 0.5
   maxWeight: 5

@@ -470,9 +470,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fab8b1dfd3d6df34db8fc051df12e931, type: 2}
   - {fileID: 11400000, guid: 64deffd2d7478ee49b18b7ed8b8959c0, type: 2}
   - {fileID: 11400000, guid: 08de9e1e718b70e429b63b95b5b4d7b9, type: 2}
+  - {fileID: 11400000, guid: 90cdc59bccae1894c8f526be622658d8, type: 2}
+  - {fileID: 11400000, guid: 58e02979f3d3c0747bba401fbc52d380, type: 2}
+  - {fileID: 11400000, guid: c84d9cf3d107eb64d8e4826d4f79dd63, type: 2}
+  - {fileID: 11400000, guid: 0b8943925d6b19a48bc5d40042562a0c, type: 2}
+  - {fileID: 11400000, guid: 2e22ba2336a378843b14fe4f9ee66544, type: 2}
+  - {fileID: 11400000, guid: 940e8e3b905d7c04bb3660009d4bf7d6, type: 2}
+  - {fileID: 11400000, guid: c1e6e60011642734fab3ba286b33b281, type: 2}
+  - {fileID: 11400000, guid: 5ed1b23f2d0322243b15d5904ae37649, type: 2}
+  - {fileID: 11400000, guid: 9444e602bc6ecd747b2bcd6b942d1ba2, type: 2}
+  - {fileID: 11400000, guid: 157a29b2b0a29794a85f92d2b74a0262, type: 2}
+  - {fileID: 11400000, guid: e9ed9ea772b8cb84ebf04fce17d00a3e, type: 2}
+  - {fileID: 11400000, guid: 48df74183998c8d4485363b02110fc17, type: 2}
+  - {fileID: 11400000, guid: 307bc31a651ce4a47af95ef625ec8555, type: 2}
+  - {fileID: 11400000, guid: afc6f29f3460939418a5c53487dc4bb5, type: 2}
   fishPrefab: {fileID: 7057652461536770946, guid: c2c74a7f7372e7c4cb3705132610fc98, type: 3}
   pondSize: 6
-  respawnDelay: 1000
+  respawnDelay: 2
   biome: {fileID: 0}
   hook: {fileID: 0}
   spawnedParent: {fileID: 808134449}
