@@ -23,7 +23,7 @@ public class reelMinigame : MonoBehaviour
     [SerializeField] RectTransform track;
     [SerializeField] RectTransform catchZoneUI;
     [SerializeField] RectTransform fishUI;
-    [SerializeField] UnityEngine.UI.Image progressFill;
+    [SerializeField] GameObject progressFill ;
 
     public bool isActive { get; private set; }
 
@@ -48,7 +48,7 @@ public class reelMinigame : MonoBehaviour
     public void forceEnd()
     {
         if (!isActive) return;
-        
+
         finish(false);
     }
 
@@ -103,7 +103,7 @@ public class reelMinigame : MonoBehaviour
         if (fishUI != null)
             fishUI.anchoredPosition = new Vector2((fishPos - 0.5f) * w, fishUI.anchoredPosition.y);
         if (progressFill != null)
-            progressFill.fillAmount = progress;
+            progressFill.transform.localScale = new Vector3(progress, 1, 1);
     }
 
     void finish(bool caught)

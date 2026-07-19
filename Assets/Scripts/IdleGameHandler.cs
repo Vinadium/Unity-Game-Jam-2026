@@ -20,7 +20,7 @@ public class IdleGameHandler : MonoBehaviour
     [SerializeField] GameObject shop;
     [SerializeField] TMP_Text toolCostText, speedCostText, hitCostText, rodCostText;
     [SerializeField] TMP_Text toolStatText, speedStatText, hitStatText, rodStatText;
-    int toolUpgradeCost = 50, speedUpgradeCost=2, hitUpgradeCost=20, rodUpgradeCost=30;
+    int toolUpgradeCost = 75, speedUpgradeCost=10, hitUpgradeCost=50, rodUpgradeCost=100;
     float speedIncr = 0.1f, hitIncr=1;
     public int toolLevel = 1, rodLevel = 1;
 
