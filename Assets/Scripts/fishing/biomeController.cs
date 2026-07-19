@@ -5,9 +5,28 @@ public class biomeController : MonoBehaviour
     [SerializeField] weighScale scale;
     [Range(0.5f, 1f)] [SerializeField] float dominanceThreshold = 0.6f;
 
+    [Header("Backgrounds")]
+    [SerializeField] GameObject freshwaterBackground;
+    [SerializeField] GameObject saltwaterBackground;
+
+    fishBiome lastBiome;
+    bool initialized = false;
+
     void Awake()
     {
         if (scale == null) scale = FindAnyObjectByType<weighScale>();
+    }
+
+    void Update()
+    {
+        fishBiome current = currentBiome;
+        if (initialized && current == lastBiome) return;
+
+        if (freshwaterBackground != null) freshwaterBackground.SetActive(current == fishBiome.Freshwater);
+        if (saltwaterBackground != null) saltwaterBackground.SetActive(current == fishBiome.Saltwater);
+
+        lastBiome = current;
+        initialized = true;
     }
 
     public fishBiome currentBiome
