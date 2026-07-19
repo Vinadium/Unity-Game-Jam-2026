@@ -532,6 +532,12 @@ MonoBehaviour:
   idleGameHandler: {fileID: 0}
   swingsBeforeIdle: 4
   animationSpeed: 1
+  toolRenderer: {fileID: 6969431629162110196}
+  woodTool: {fileID: 21300000, guid: 89a4c2ddf4ed99640b1dc9f4e1c54f77, type: 3}
+  stoneTool: {fileID: 21300000, guid: a254011ed3d5032449e13d5f4d3fae9d, type: 3}
+  ironTool: {fileID: 21300000, guid: 4033efda3f2083c489e54c5f07e95177, type: 3}
+  goldTool: {fileID: 21300000, guid: ee0155c15b0b62c42be716365001e096, type: 3}
+  diamondTool: {fileID: 21300000, guid: 459414f036cc09b4b8c2aae4b0676d73, type: 3}
 --- !u!1 &4067665475131543113
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,9 +15,19 @@ public class PlayerAnimationController : MonoBehaviour
 
     private bool isMining = false;
 
+    [SerializeField] private SpriteRenderer toolRenderer;
+
+    [Header("Tool Sprites")]
+    [SerializeField] private Sprite woodTool;
+    [SerializeField] private Sprite stoneTool;
+    [SerializeField] private Sprite ironTool;
+    [SerializeField] private Sprite goldTool;
+    [SerializeField] private Sprite diamondTool;
+
     private void Start()
     {
         animator.SetInteger("state", 0);
+        SetToolLevel(1);
     }
 
     private void Update()
@@ -81,6 +91,32 @@ public class PlayerAnimationController : MonoBehaviour
             {
                 animator.SetInteger("state", 0);
             }
+        }
+    }
+
+    public void SetToolLevel(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                toolRenderer.sprite = woodTool;
+                break;
+            
+            case 2:
+                toolRenderer.sprite = stoneTool;
+                break;
+
+            case 3:
+                toolRenderer.sprite = ironTool;
+                break;
+
+            case 4:
+                toolRenderer.sprite = goldTool;
+                break;
+
+            case 5:
+                toolRenderer.sprite = diamondTool;
+                break;
         }
     }
 

@@ -125,7 +125,7 @@ public class IdleGameHandler : MonoBehaviour
         {
             moneyAmount -= toolUpgradeCost;
             toolLevel++;
-            ////////////////////////////////////////////////////////////////////////////////////CHANGE TOOL TEXTURE
+            animationController.SetToolLevel(toolLevel);
             toolUpgradeCost = (int)(toolUpgradeCost * 1.5);
             toolCostText.text = "Cost: " + toolUpgradeCost;
             toolStatText.text = toolLevel + " per hit -> " + (toolLevel + 1) + " per hit";
