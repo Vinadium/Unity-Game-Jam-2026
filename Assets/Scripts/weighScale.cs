@@ -12,6 +12,9 @@ public class weighScale : MonoBehaviour
     [SerializeField] float maxOffset = 0.5f;
     [SerializeField] float moveSmoothing = 5f;
 
+    [SerializeField] private ScaleScalePile leftPile;
+    [SerializeField] private ScaleScalePile rightPile;
+
     public int leftCount { get; private set;}
     public int rightCount { get; private set;}
 
@@ -45,13 +48,29 @@ public class weighScale : MonoBehaviour
 
     public void Add(bool left)
     {
-        if (left) leftCount++;
-        else rightCount++;
+        if (left)
+        {
+            leftCount++;
+            leftPile.SetScaleCount(leftCount);
+        }
+        else
+        {
+            rightCount++;
+            rightPile.SetScaleCount(rightCount);
+        }
     }
 
     public void Remove(bool left)
     {
-        if (left) leftCount = Mathf.Max(0, leftCount - 1);
-        else rightCount = Mathf.Max(0, rightCount - 1);
+        if (left)
+        {
+            leftCount = Mathf.Max(0, leftCount - 1);
+            leftPile.SetScaleCount(leftCount);
+        }
+        else
+        {
+            rightCount = Mathf.Max(0, rightCount - 1);
+            rightPile.SetScaleCount(rightCount);
+        }
     }
 }
