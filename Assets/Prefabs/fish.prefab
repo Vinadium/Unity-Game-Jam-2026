@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3162192430592567136}
   - component: {fileID: 2511216909993298856}
-  - component: {fileID: 4931682389175382068}
   m_Layer: 0
   m_Name: actualFish
   m_TagString: Untagged
@@ -93,29 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &4931682389175382068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602931612981993306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec1a47ef866e09249b89e52c80603ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::fishController
-  swimSpeed: 1.5
-  waypointReachDist: 0.2
-  noticeRange: 2
-  pickRange: 0.4
-  minPicks: 2
-  maxPicks: 5
-  pickInterval: 0.5
-  biteChance: 0.5
-  loseInterestCooldown: 2
-  hook: {fileID: 0}
-  minigame: {fileID: 0}
 --- !u!1 &7057652461536770946
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3143610989380371125}
+  - component: {fileID: 335188819696690213}
   m_Layer: 0
   m_Name: fish
   m_TagString: Untagged
@@ -148,3 +125,29 @@ Transform:
   - {fileID: 3162192430592567136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335188819696690213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057652461536770946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1a47ef866e09249b89e52c80603ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::fishController
+  swimSpeed: 1.5
+  waypointReachDist: 0.2
+  noticeRange: 2
+  pickRange: 0.4
+  minPicks: 2
+  maxPicks: 5
+  pickInterval: 0.5
+  biteChance: 0.5
+  loseInterestCooldown: 2
+  hook: {fileID: 0}
+  minigame: {fileID: 0}
+  data: {fileID: 0}
+  weight: 0
+  scaleValue: 0

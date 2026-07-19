@@ -40,9 +40,9 @@ public class fishController : MonoBehaviour
 
     void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
         if (hook == null) hook = FindAnyObjectByType<hookMovement>();
-        if (minigame == null) minigame = FindAnyObjectByType<reelMinigame>();
+        if (minigame == null) minigame = FindAnyObjectByType<reelMinigame>(FindObjectsInactive.Include);
 
         minBounds = hook.minBounds;
         maxBounds = hook.maxBounds;
