@@ -469,6 +469,7 @@ MonoBehaviour:
   allFish:
   - {fileID: 11400000, guid: fab8b1dfd3d6df34db8fc051df12e931, type: 2}
   - {fileID: 11400000, guid: 64deffd2d7478ee49b18b7ed8b8959c0, type: 2}
+  - {fileID: 11400000, guid: 08de9e1e718b70e429b63b95b5b4d7b9, type: 2}
   fishPrefab: {fileID: 7057652461536770946, guid: c2c74a7f7372e7c4cb3705132610fc98, type: 3}
   pondSize: 6
   respawnDelay: 1000

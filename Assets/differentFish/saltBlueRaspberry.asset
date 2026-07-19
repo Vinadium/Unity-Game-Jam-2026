@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dc6725cb4f494a488809b0795cb7857, type: 3}
-  m_Name: redFish
+  m_Name: saltBlueRaspberry
   m_EditorClassIdentifier: Assembly-CSharp::fishData
-  fishName: Red Fish
-  sprite: {fileID: 21300000, guid: e70ea514c46b0ed42b11a10830caeace, type: 3}
+  fishName: Blue Raspberry
+  sprite: {fileID: 21300000, guid: 811d6cf183743f94483c121e6b505bb0, type: 3}
   skeletonSprite: {fileID: 21300000, guid: 9522bb5ff1085144bab8545c35600f25, type: 3}
-  baseValue: 5
+  baseValue: 1
   biome: 0
-  spawnWeight: 8
-  minWeight: 4
-  maxWeight: 10
-  swimSpeed: 1.9
+  spawnWeight: 10
+  minWeight: 0.5
+  maxWeight: 5
+  swimSpeed: 1.5
   biteChance: 0.5
