@@ -48,6 +48,7 @@ public class reelMinigame : MonoBehaviour
     public void forceEnd()
     {
         if (!isActive) return;
+        
         finish(false);
     }
 
